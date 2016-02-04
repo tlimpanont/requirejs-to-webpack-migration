@@ -1,11 +1,11 @@
-define(['jquery', 'chance', 'lodash', 'modules/bg'], function($, Chance, _, bg) {
+define(['jquery', 'chance', 'lodash', 'modules/bg'], ($, Chance, _, bg) => {
   var chance = new Chance();
 
-  return (function() {
+  return (() => {
 
-    var appendText = function() {
-      $('body').append('jQuery ' + $.fn.jquery + ' loaded!' +
-        ' with chance.string(): ' + chance.string() + '<br />'
+    var appendText = () => {
+      $('body').append(`jQuery   $.fn.jquery  loaded!
+         with chance.string():   ${chance.string()}  <br />`
       );
     };
 
