@@ -19,5 +19,15 @@ module.exports = {
       'lodash': path.resolve(__dirname, 'bower_components/lodash/dist/lodash'),
       'chance': path.resolve(__dirname, 'bower_components/chance/chance')
     }
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: { presets: [ 'es2015'] }
+      }
+    ]
   }
 };
