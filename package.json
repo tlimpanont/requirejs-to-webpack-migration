@@ -32,6 +32,7 @@
     "grunt-contrib-qunit": "*",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*"
+    "grunt-contrib-watch": "*",
+    "webpack": "^1.12.13"
   }
 }

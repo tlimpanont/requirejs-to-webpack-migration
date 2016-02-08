@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -6,7 +7,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'app/js'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: './app/js/'
   },
   resolve: {
     moduleDirectories: [
@@ -29,5 +31,8 @@ module.exports = {
         query: { presets: [ 'es2015'] }
       }
     ]
-  }
+  },
+  plugins: [
+    //new webpack.ContextReplacementPlugin(/timeout$/, __dirname + '/app/js/')
+  ]
 };

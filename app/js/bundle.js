@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "./app/js/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -28885,10 +28885,16 @@
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(1)], __WEBPACK_AMD_DEFINE_RESULT__ = function ($) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(1), __webpack_require__], __WEBPACK_AMD_DEFINE_RESULT__ = function ($, require) {
+
 	  return {
 	    paint: function paint(color) {
 	      $('body').css({ background: color });
+
+	      var $expressionRequire = 'modules/timeout';
+	      componentRequire = !(function webpackMissingModule() { var e = new Error("Cannot find module \"modules/timeout\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+	      componentRequire.resolve();
 	    }
 	  };
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
